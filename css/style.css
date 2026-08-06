@@ -166,6 +166,8 @@ thead tr:nth-child(1) th {
 
     top:0;
 
+    height:34px;
+
     z-index:30;
 
     background:#cfe2f3;
@@ -180,6 +182,8 @@ thead tr:nth-child(2) th {
 
     top:34px;
 
+    height:34px;
+
     z-index:29;
 
     background:#efe7c5;
@@ -193,6 +197,8 @@ thead tr:nth-child(3) th {
     position:sticky;
 
     top:68px;
+
+    height:34px;
 
     z-index:28;
 
