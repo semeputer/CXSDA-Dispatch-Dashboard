@@ -6,7 +6,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Segoe UI, 2Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -159,14 +159,18 @@ td{
    STICKY HEADER
 ========================================== */
 
-thead th{
+/* First header row */
+thead tr:first-child th{
+    position: sticky;
+    top: 0;
+    z-index: 30;
+}
 
-    position:sticky;
-
-    top:0;
-
-    z-index:20;
-
+/* Second header row */
+thead tr:nth-child(2) th{
+    position: sticky;
+    top: 36px;      /* Height of the first header row */
+    z-index: 29;
 }
 
 /* ==========================================
