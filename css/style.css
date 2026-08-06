@@ -1,0 +1,353 @@
+/* ==========================================
+   GENERAL
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header{
+    background:#1f4e79;
+    color:white;
+    padding:18px 25px;
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:.3px;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+/* ==========================================
+   FILTERS
+========================================== */
+
+.controls{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+
+    padding:15px 20px;
+
+    background:white;
+
+    border-bottom:1px solid #d9d9d9;
+
+    position:sticky;
+    top:64px;
+    z-index:999;
+}
+
+.controls input,
+.controls select,
+.controls button{
+
+    padding:10px 14px;
+
+    border:1px solid #cfcfcf;
+
+    border-radius:6px;
+
+    font-size:14px;
+
+    background:white;
+
+    transition:.25s;
+}
+
+.controls input{
+
+    min-width:250px;
+
+}
+
+.controls select{
+
+    min-width:180px;
+
+}
+
+.controls input:focus,
+.controls select:focus{
+
+    outline:none;
+
+    border-color:#1f4e79;
+
+    box-shadow:0 0 5px rgba(31,78,121,.25);
+
+}
+
+.controls button{
+
+    background:#1f4e79;
+
+    color:white;
+
+    cursor:pointer;
+
+    border:none;
+
+}
+
+.controls button:hover{
+
+    background:#16395b;
+
+}
+
+/* ==========================================
+   TABLE CONTAINER
+========================================== */
+
+.table-container{
+
+    height:calc(100vh - 135px);
+
+    overflow:auto;
+
+    background:white;
+
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+table{
+
+    border-collapse:collapse;
+
+    width:max-content;
+
+    min-width:2200px;
+
+}
+
+th,
+td{
+
+    border:1px solid #cfcfcf;
+
+    padding:6px 10px;
+
+    font-size:12px;
+
+    white-space:nowrap;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   STICKY HEADER
+========================================== */
+
+thead th{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:20;
+
+}
+
+/* ==========================================
+   STICKY COLUMN A
+========================================== */
+
+.first-col{
+
+    position:sticky;
+
+    left:0;
+
+    background:white;
+
+    z-index:15;
+
+    min-width:220px;
+
+    text-align:left;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   TOP LEFT CELL
+========================================== */
+
+.corner{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    z-index:50;
+
+    background:#efe7c5;
+
+    min-width:220px;
+
+}
+
+/* ==========================================
+   HEADER COLORS
+========================================== */
+
+.group-header{
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.dispatched{
+
+    background:#cfe2f3;
+
+}
+
+.completed{
+
+    background:#d9ead3;
+
+}
+
+.handled{
+
+    background:#d0e0e3;
+
+}
+
+.unhandled{
+
+    background:#f4cccc;
+
+}
+
+/* ==========================================
+   SUBHEADERS
+========================================== */
+
+.subheader th,
+.subheader{
+
+    background:#efe7c5;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   CLUSTER ROW
+========================================== */
+
+.cluster-row td{
+
+    background:#fff2cc;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+tbody tr:hover td{
+
+    background:#fff8dc;
+
+}
+
+tbody tr:hover td.first-col{
+
+    background:#ffe699;
+
+}
+
+/* ==========================================
+   STRIPES
+========================================== */
+
+tbody tr:nth-child(even):not(.cluster-row){
+
+    background:#fafafa;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.table-container::-webkit-scrollbar{
+
+    height:12px;
+
+    width:12px;
+
+}
+
+.table-container::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+.table-container::-webkit-scrollbar-thumb{
+
+    background:#9b9b9b;
+
+    border-radius:20px;
+
+}
+
+.table-container::-webkit-scrollbar-thumb:hover{
+
+    background:#6f6f6f;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.controls{
+
+    flex-direction:column;
+
+}
+
+.controls input,
+.controls select,
+.controls button{
+
+    width:100%;
+
+}
+
+}

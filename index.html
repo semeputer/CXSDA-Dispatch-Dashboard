@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispatch Monitoring Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="header">
+    Dispatch Monitoring Dashboard
+</div>
+
+<!-- ===========================
+     FILTERS
+=========================== -->
+
+<div class="controls">
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="🔍 Search CX Name">
+
+    <select id="clusterFilter">
+        <option value="ALL">All Clusters</option>
+    </select>
+
+    <select id="statusFilter">
+        <option value="ALL">All Status</option>
+        <option>Dispatched</option>
+        <option>Completed</option>
+        <option>Handled</option>
+        <option>Unhandled</option>
+    </select>
+
+    <button id="clearFilters">
+        Clear Filters
+    </button>
+
+</div>
+
+<!-- ===========================
+     TABLE
+=========================== -->
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th rowspan="2" class="corner">
+CLUSTER / CX NAME
+</th>
+
+<th colspan="11" class="group-header dispatched">
+DISPATCHED
+</th>
+
+<th colspan="11" class="group-header completed">
+COMPLETED
+</th>
+
+<th colspan="11" class="group-header handled">
+HANDLED
+</th>
+
+<th colspan="11" class="group-header unhandled">
+UNHANDLED
+</th>
+
+</tr>
+
+<tr class="subheader">
+
+<!-- DISPATCHED -->
+
+<th>NC</th>
+<th>A/O</th>
+<th>IPTV</th>
+<th>NWUP</th>
+<th>RELOC</th>
+<th>AS</th>
+<th>0D</th>
+<th>1D</th>
+<th>2D</th>
+<th>3D</th>
+<th>4-7D</th>
+
+<!-- COMPLETED -->
+
+<th>NC</th>
+<th>A/O</th>
+<th>IPTV</th>
+<th>NWUP</th>
+<th>RELOC</th>
+<th>AS</th>
+<th>0D</th>
+<th>1D</th>
+<th>2D</th>
+<th>3D</th>
+<th>4-7D</th>
+
+<!-- HANDLED -->
+
+<th>NC</th>
+<th>A/O</th>
+<th>IPTV</th>
+<th>NWUP</th>
+<th>RELOC</th>
+<th>AS</th>
+<th>0D</th>
+<th>1D</th>
+<th>2D</th>
+<th>3D</th>
+<th>4-7D</th>
+
+<!-- UNHANDLED -->
+
+<th>NC</th>
+<th>A/O</th>
+<th>IPTV</th>
+<th>NWUP</th>
+<th>RELOC</th>
+<th>AS</th>
+<th>0D</th>
+<th>1D</th>
+<th>2D</th>
+<th>3D</th>
+<th>4-7D</th>
+
+</tr>
+
+</thead>
+
+<tbody id="dispatchTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
