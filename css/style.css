@@ -213,10 +213,29 @@ thead th{
 ========================================== */
 
 
-/* ROW 1 */
-thead tr:nth-child(1) th{
+thead{
+    position:relative;
+}
+
+
+thead th{
 
     position:sticky;
+
+    height:30px;
+
+    padding:0 8px;
+
+    line-height:30px;
+
+    vertical-align:middle;
+
+}
+
+
+/* Row 1 */
+
+thead tr:nth-child(1) th{
 
     top:0;
 
@@ -228,12 +247,11 @@ thead tr:nth-child(1) th{
 
 
 
-/* ROW 2 */
+/* Row 2 */
+
 thead tr:nth-child(2) th{
 
-    position:sticky;
-
-    top:34px;
+    top:30px;
 
     z-index:29;
 
@@ -243,20 +261,17 @@ thead tr:nth-child(2) th{
 
 
 
-/* ROW 3 */
+/* Row 3 */
+
 thead tr:nth-child(3) th{
 
-    position:sticky;
-
-    top:68px;
+    top:60px;
 
     z-index:28;
 
     background:#efe7c5;
 
 }
-
-
 
 /* ==========================================
    STICKY FIRST COLUMN
