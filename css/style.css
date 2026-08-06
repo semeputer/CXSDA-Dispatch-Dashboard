@@ -159,25 +159,45 @@ td{
    STICKY HEADER
 ========================================== */
 
-/* First row */
-thead tr:nth-child(1) th{
-    position: sticky;
-    top: 0;
-    z-index: 30;
+/* Row 1 - DISPATCHED */
+thead tr:nth-child(1) th {
+
+    position:sticky;
+
+    top:0;
+
+    z-index:30;
+
+    background:#cfe2f3;
+
 }
 
-/* Second row */
-thead tr:nth-child(2) th{
-    position: sticky;
-    top: 34px;
-    z-index: 29;
+
+/* Row 2 - NC A/O IPTV... */
+thead tr:nth-child(2) th {
+
+    position:sticky;
+
+    top:34px;
+
+    z-index:29;
+
+    background:#efe7c5;
+
 }
 
-/* Third row */
-thead tr:nth-child(3) th{
-    position: sticky;
-    top: 68px;
-    z-index: 28;
+
+/* Row 3 - 0D 1D 2D... */
+thead tr:nth-child(3) th {
+
+    position:sticky;
+
+    top:68px;
+
+    z-index:28;
+
+    background:#efe7c5;
+
 }
 
 /* ==========================================
@@ -217,8 +237,6 @@ thead tr:nth-child(3) th{
     z-index:100;
 
     background:#efe7c5;
-
-    min-width:220px;
 
 }
 
