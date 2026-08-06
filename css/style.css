@@ -6,7 +6,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI, 2Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -14,24 +14,36 @@ body{
     color:#333;
 }
 
+
 /* ==========================================
    HEADER
 ========================================== */
 
 .header{
+
     background:#1f4e79;
     color:white;
-    padding:18px 25px;
+
+    height:64px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 25px;
+
     font-size:24px;
     font-weight:600;
+
     letter-spacing:.3px;
 
     position:sticky;
     top:0;
+
     z-index:1000;
 
     box-shadow:0 2px 8px rgba(0,0,0,.15);
 }
+
 
 /* ==========================================
    FILTERS
@@ -41,6 +53,7 @@ body{
 
     display:flex;
     flex-wrap:wrap;
+
     gap:12px;
 
     padding:15px 20px;
@@ -49,10 +62,15 @@ body{
 
     border-bottom:1px solid #d9d9d9;
 
+
     position:sticky;
+
     top:64px;
+
     z-index:999;
+
 }
+
 
 .controls input,
 .controls select,
@@ -69,7 +87,9 @@ body{
     background:white;
 
     transition:.25s;
+
 }
+
 
 .controls input{
 
@@ -77,11 +97,13 @@ body{
 
 }
 
+
 .controls select{
 
     min-width:180px;
 
 }
+
 
 .controls input:focus,
 .controls select:focus{
@@ -93,6 +115,7 @@ body{
     box-shadow:0 0 5px rgba(31,78,121,.25);
 
 }
+
 
 .controls button{
 
@@ -106,15 +129,19 @@ body{
 
 }
 
+
 .controls button:hover{
 
     background:#16395b;
 
 }
 
+
+
 /* ==========================================
    TABLE CONTAINER
 ========================================== */
+
 
 .table-container{
 
@@ -126,19 +153,26 @@ body{
 
 }
 
+
+
 /* ==========================================
    TABLE
 ========================================== */
 
+
 table{
 
-    border-collapse:collapse;
+    border-collapse:separate;
+
+    border-spacing:0;
 
     width:max-content;
 
     min-width:2200px;
 
 }
+
+
 
 th,
 td{
@@ -155,18 +189,36 @@ td{
 
 }
 
+
+
+/* ==========================================
+   HEADER ROW HEIGHT FIX
+========================================== */
+
+
+thead th{
+
+    height:34px;
+
+    padding:0 10px;
+
+    line-height:34px;
+
+}
+
+
+
 /* ==========================================
    STICKY HEADER
 ========================================== */
 
-/* Row 1 - DISPATCHED */
-thead tr:nth-child(1) th {
+
+/* ROW 1 */
+thead tr:nth-child(1) th{
 
     position:sticky;
 
     top:0;
-
-    height:34px;
 
     z-index:30;
 
@@ -175,14 +227,13 @@ thead tr:nth-child(1) th {
 }
 
 
-/* Row 2 - NC A/O IPTV... */
-thead tr:nth-child(2) th {
+
+/* ROW 2 */
+thead tr:nth-child(2) th{
 
     position:sticky;
 
     top:34px;
-
-    height:34px;
 
     z-index:29;
 
@@ -191,14 +242,13 @@ thead tr:nth-child(2) th {
 }
 
 
-/* Row 3 - 0D 1D 2D... */
-thead tr:nth-child(3) th {
+
+/* ROW 3 */
+thead tr:nth-child(3) th{
 
     position:sticky;
 
     top:68px;
-
-    height:34px;
 
     z-index:28;
 
@@ -206,9 +256,12 @@ thead tr:nth-child(3) th {
 
 }
 
+
+
 /* ==========================================
-   STICKY COLUMN A
+   STICKY FIRST COLUMN
 ========================================== */
+
 
 .first-col{
 
@@ -228,9 +281,9 @@ thead tr:nth-child(3) th {
 
 }
 
-/* ==========================================
-   TOP LEFT CELL
-========================================== */
+
+
+/* Top-left corner */
 
 .corner{
 
@@ -246,9 +299,12 @@ thead tr:nth-child(3) th {
 
 }
 
+
+
 /* ==========================================
    HEADER COLORS
 ========================================== */
+
 
 .group-header{
 
@@ -258,11 +314,13 @@ thead tr:nth-child(3) th {
 
 }
 
+
 .dispatched{
 
     background:#cfe2f3;
 
 }
+
 
 .completed{
 
@@ -270,11 +328,13 @@ thead tr:nth-child(3) th {
 
 }
 
+
 .handled{
 
     background:#d0e0e3;
 
 }
+
 
 .unhandled{
 
@@ -282,9 +342,12 @@ thead tr:nth-child(3) th {
 
 }
 
+
+
 /* ==========================================
    SUBHEADERS
 ========================================== */
+
 
 .subheader th,
 .subheader{
@@ -295,9 +358,12 @@ thead tr:nth-child(3) th {
 
 }
 
+
+
 /* ==========================================
    CLUSTER ROW
 ========================================== */
+
 
 .cluster-row td{
 
@@ -307,9 +373,12 @@ thead tr:nth-child(3) th {
 
 }
 
+
+
 /* ==========================================
    HOVER
 ========================================== */
+
 
 tbody tr:hover td{
 
@@ -317,15 +386,19 @@ tbody tr:hover td{
 
 }
 
+
 tbody tr:hover td.first-col{
 
     background:#ffe699;
 
 }
 
+
+
 /* ==========================================
    STRIPES
 ========================================== */
+
 
 tbody tr:nth-child(even):not(.cluster-row){
 
@@ -333,9 +406,12 @@ tbody tr:nth-child(even):not(.cluster-row){
 
 }
 
+
+
 /* ==========================================
    SCROLLBAR
 ========================================== */
+
 
 .table-container::-webkit-scrollbar{
 
@@ -345,11 +421,13 @@ tbody tr:nth-child(even):not(.cluster-row){
 
 }
 
+
 .table-container::-webkit-scrollbar-track{
 
     background:#ececec;
 
 }
+
 
 .table-container::-webkit-scrollbar-thumb{
 
@@ -359,15 +437,19 @@ tbody tr:nth-child(even):not(.cluster-row){
 
 }
 
+
 .table-container::-webkit-scrollbar-thumb:hover{
 
     background:#6f6f6f;
 
 }
 
+
+
 /* ==========================================
    RESPONSIVE
 ========================================== */
+
 
 @media(max-width:900px){
 
@@ -376,6 +458,7 @@ tbody tr:nth-child(even):not(.cluster-row){
     flex-direction:column;
 
 }
+
 
 .controls input,
 .controls select,
