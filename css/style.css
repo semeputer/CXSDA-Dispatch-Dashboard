@@ -159,17 +159,25 @@ td{
    STICKY HEADER
 ========================================== */
 
-/* First header row */
-thead tr:first-child th{
-    height: 34px;
+/* First row */
+thead tr:nth-child(1) th{
     position: sticky;
     top: 0;
+    z-index: 30;
 }
 
+/* Second row */
 thead tr:nth-child(2) th{
-    height: 34px;
     position: sticky;
     top: 34px;
+    z-index: 29;
+}
+
+/* Third row */
+thead tr:nth-child(3) th{
+    position: sticky;
+    top: 68px;
+    z-index: 28;
 }
 
 /* ==========================================
@@ -206,7 +214,7 @@ thead tr:nth-child(2) th{
 
     left:0;
 
-    z-index:50;
+    z-index:100;
 
     background:#efe7c5;
 
