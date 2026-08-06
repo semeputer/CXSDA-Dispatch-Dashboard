@@ -24,21 +24,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
         complete: function(results){
 
-            allData = results.data;
-
-            const headers = Object.keys(allData[0]);
-
-            CLUSTER = headers.find(h =>
-                h.toUpperCase().replace(/\s/g,"") === "CLUSTER"
-            );
-
-            CX_NAME = headers.find(h =>
-                h.toUpperCase().replace(/\s/g,"") === "CXNAME"
-            );
-
+            console.log(results);
+        
+            allData = results.data.map(row => {
+        
+                const cleaned = {};
+        
+                Object.keys(row).forEach(key => {
+                    cleaned[key.replace(/\uFEFF/g, "").trim()] = row[key];
+                });
+        
+                return cleaned;
+        
+            });
+        
+            CLUSTER = "CLUSTER";
+            CX_NAME = "CX_NAME";
+        
+            console.log("Rows:", allData.length);
+            console.log("First row:", allData[0]);
+        
             populateClusterFilter();
             buildTable();
-
+        
+        },
+        error: function(err){
+            console.error(err);
         }
 
     });
@@ -79,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         tbody.innerHTML="";
 
-        const keyword = searchBox.value.toLowerCase();
+        const keyword = searchBox.value.trim().toLowerCase();
         const selectedCluster = clusterFilter.value;
 
         const clusters=[...new Set(
@@ -105,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const searchMatch =
                     keyword==="" ||
-                    person[CX_NAME].toLowerCase().includes(keyword);
+                    (person[CX_NAME] || "").toLowerCase().includes(keyword);
 
                 const clusterMatch =
                     selectedCluster==="ALL" ||
