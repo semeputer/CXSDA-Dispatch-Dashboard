@@ -161,14 +161,15 @@ td{
 
 /* First header row */
 thead tr:first-child th{
+    height: 34px;
     position: sticky;
     top: 0;
 }
 
-/* Second header row */
 thead tr:nth-child(2) th{
+    height: 34px;
     position: sticky;
-    top: 32px;      /* Height of the first header row */
+    top: 34px;
 }
 
 /* ==========================================
