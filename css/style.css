@@ -308,7 +308,7 @@ thead tr:nth-child(3) th{
 
     left:0;
 
-    z-index:100;
+    z-index:1000;
 
     background:#efe7c5;
 
