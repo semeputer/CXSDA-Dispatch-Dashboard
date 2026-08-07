@@ -220,7 +220,7 @@ thead{
 
 thead th{
 
-    position:sticky;
+    /*position:sticky; */
 
     height:30px;
 
@@ -300,24 +300,22 @@ tbody td.first-col{
 
 /* Top-left corner */
 
-.corner{
+thead th.corner{
 
-    position: sticky;
+    position:sticky;
 
-    top: 0;
-    left: 0;
+    top:0;
+
+    left:0;
+
+    z-index:9999;
+
+    background:#efe7c5;
 
     min-width:220px;
     max-width:220px;
 
-    background:#efe7c5;
-
-    z-index:100;
-
-    border-right:1px solid #cfcfcf;
-
     box-shadow:2px 0 0 #cfcfcf;
-
 }
 
 
