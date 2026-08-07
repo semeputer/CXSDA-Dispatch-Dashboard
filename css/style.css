@@ -161,15 +161,9 @@ body{
 
 
 table{
-
-    border-collapse:separate;
-
-    border-spacing:0;
-
-    width:max-content;
-
+    border-collapse: collapse;
+    width: max-content;
     min-width:2200px;
-
 }
 
 
@@ -231,7 +225,6 @@ thead th{
     vertical-align:middle;
 
 }
-
 
 /* Row 1 */
 
@@ -305,17 +298,18 @@ thead th.corner{
     position:sticky;
 
     top:0;
-
     left:0;
 
-    z-index:9999;
+    z-index:1000;
 
     background:#efe7c5;
 
     min-width:220px;
+    width:220px;
     max-width:220px;
 
-    box-shadow:2px 0 0 #cfcfcf;
+    border-right:1px solid #cfcfcf;
+    border-bottom:1px solid #cfcfcf;
 }
 
 
